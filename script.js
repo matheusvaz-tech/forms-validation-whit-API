@@ -8,23 +8,24 @@ function customValidation(event) {
   function verifyErrors() {
     let foundError = false;
 
-    for (error in field.validity) {
-      if (error != "customError") {
-        field.validity[error];
+    for (let error in field.validity) {
+      if (error !== "customError" && field.validity[error]) {
+        foundError = error;
       }
     }
 
     return foundError;
   }
 
-  verifyErrors();
+  const error = verifyErrors();
+  console.log(`Error exists: ${error}.`);
 
-  // Trocar mensagem de required
-  field.setCustomValidity("Você precisa preencher esse campo");
-}
-
-for (field of fields) {
-  field.addEventListener("invalid", customValidation);
+  if (error) {
+    // Trocar mensagem de required
+    field.setCustomValidity("Você precisa preencher esse campo");
+  } else {
+    field.setCustomValidity("");
+  }
 }
 
 document.querySelector("form").addEventListener("submit", (event) => {
