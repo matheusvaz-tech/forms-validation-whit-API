@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+:root {
+  --primary-color: #fd951f;
+  --bg-color: #130f0d;
+  --text-color: #f0f0f5;
+  --light-color: rgba(255, 255, 255, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+form {
+  background: rgba(255, 255, 255, 0.03);
+
+  width: 100%;
+  max-width: 31.25rem;
+
+  margin: 2rem auto;
+  padding: 2rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form h1 {
+  margin-bottom: 2rem;
+}
+
+div.input {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+input,
+button {
+  /* Reset appeareance */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* Box */
+  width: 100%;
+
+  padding: 1rem 0;
+
+  border: none;
+  border-bottom: 0.064rem solid var(--primary-color);
+
+  background-color: transparent;
+  outline: none;
+
+  /* Text */
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+}
+
+input ~ label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.4s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-1.5rem);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+span.error {
+  display: flex;
+
+  padding: 0;
+
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+span.error.active {
+  border: 0.064rem solid red;
+  padding: 0.4rem;
+}
