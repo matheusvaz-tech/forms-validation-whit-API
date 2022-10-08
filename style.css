@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 
 :root {
-  --primary-color: #864eff;
+  --primary-color: #956dcd;
   --bg-color: #130f0d;
   --text-color: #f0f0f5;
   --light-color: rgba(255, 255, 255, 0.04);
@@ -19,7 +19,20 @@ html {
 }
 
 body {
+  display: flex;
+  background: var(--bg-color);
+}
+
+body section {
+  width: 50%;
+  background-image: url(./woman-wearing-vr-glasses-medium-shot\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
   height: 100vh;
+  width: 50%;
 
   display: flex;
   flex-direction: column;
@@ -41,6 +54,8 @@ form {
 
   display: flex;
   flex-direction: column;
+
+  border-radius: 0.5rem;
 }
 
 form h1 {
@@ -78,6 +93,12 @@ button {
 button {
   margin-top: 1rem;
   background-color: var(--primary-color);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7b51b7;
 }
 
 input ~ label {
@@ -105,6 +126,6 @@ span.error {
 }
 
 span.error.active {
-  border: 0.064rem solid red;
+  border: 0.064rem solid rgb(247, 36, 36);
   padding: 0.4rem;
 }
