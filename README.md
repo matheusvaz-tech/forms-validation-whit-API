@@ -1,5 +1,7 @@
 # Forms validation project
 
+![preview](./images/forms-validation-preview.png)
+
 In this project, the idea was to use Javascript to validate the inputs that will allow a user to enter a list.
 
 > [Click here to view the web page](https://matheusvaz-dev.github.io/forms-validation-whit-API/)
